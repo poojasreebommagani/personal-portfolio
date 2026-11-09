@@ -51,3 +51,60 @@ footer {
     text-align: center;
     padding: 15px;
 }
+
+/* Version 2 improvements */
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+section {
+    max-width: 900px;
+    margin: 25px auto;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+#home {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+#projects h2 {
+    grid-column: 1 / -1;
+}
+
+.project {
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    #projects {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        margin: 12px;
+    }
+}

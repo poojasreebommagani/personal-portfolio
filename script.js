@@ -13,11 +13,13 @@ document.getElementById("contactForm")
         const result = document.getElementById("result");
 
         if (!name || !message || !isValidEmail(email)) {
-            result.textContent =
-                "Please enter valid details and email.";
+            result.textContent = "Please enter valid details and email.";
             return;
         }
 
-        result.textContent =
-            "Form validated successfully!";
+        result.textContent = "Form validated successfully!";
     });
+
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
